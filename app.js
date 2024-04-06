@@ -1,15 +1,20 @@
 const express = require('express');
-const { Mongoose } = require('mongoose');
+const { mongoose } = require('mongoose');
 const app = express();
 require('dotenv').config();
 
 app.use(express.urlencoded({ extended:true}));
 app.use(express.json());
 
-Mongoose.connect("mongodb://localhost:27017/MVC", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+// Serve static HTML files from the 'public' directory
+app.use(express.static('public'));
+
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + '/public/register.html');
+});
+
+
+mongoose.connect("mongodb://localhost:27017/MVC")
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error(err));
 
