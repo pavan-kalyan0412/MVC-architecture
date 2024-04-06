@@ -13,6 +13,9 @@ app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/public/register.html');
 });
 
+app.get('/login', (req,res) =>{
+    res.sendFile(__dirname + '/public/login.html')
+});
 
 mongoose.connect("mongodb://localhost:27017/MVC")
 .then(() => console.log('Connected to MongoDB'))
