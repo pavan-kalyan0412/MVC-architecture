@@ -31,6 +31,8 @@ Using MVC architecture in Node.js offers several benefits, including:
 
 ## Components of MVC
 
+The three interconnected components of MVC are the Model, the View, and the Controller. Let's take a closer look at each of these components.
+
 ### Model
 
 The model represents the application's data and business logic. It interacts with the database, processes data, and responds to queries from the controller.
