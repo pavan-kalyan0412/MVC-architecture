@@ -1,0 +1,15 @@
+{
+  "name": "mvc-architecture",
+  "version": "1.0.0",
+  "description": "Node.js is a popular runtime environment for building scalable, high-performance web applications. One of the key architectural patterns used in Node.js development is the Model-View-Controller (MVC) pattern. This README will guide you through understanding MVC and implementing it in Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "dev":"node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
