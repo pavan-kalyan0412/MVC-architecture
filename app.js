@@ -22,7 +22,7 @@ mongoose.connect("mongodb://localhost:27017/MVC")
 .catch(err => console.error(err));
 
 const authRoutes = require('./routes/authRoutes');
-app.use('/', authRoutes);
+app.use('/mvc', authRoutes);
 
 
 const PORT = process.env.PORT || 4111;
