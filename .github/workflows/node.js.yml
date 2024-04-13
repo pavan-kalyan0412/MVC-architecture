@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.1.0]  # Use the version installed on your machine
+        node-version: [20.x]  # Use the version installed on your machine
 
     steps:
       - uses: actions/checkout@v3
