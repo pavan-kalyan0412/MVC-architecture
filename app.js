@@ -1,5 +1,5 @@
 const express = require('express');
-const { mongoose } = require('mongoose');
+const mongoose  = require('mongoose');
 const app = express();
 require('dotenv').config();
 
@@ -22,7 +22,7 @@ mongoose.connect("mongodb://localhost:27017/MVC")
 .catch(err => console.error(err));
 
 const authRoutes = require('./routes/authRoutes');
-app.use('/mvc', authRoutes);
+app.use('/', authRoutes);
 
 
 const PORT = process.env.PORT || 4111;
