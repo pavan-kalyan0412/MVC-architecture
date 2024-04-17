@@ -17,7 +17,7 @@ app.get('/login', (req,res) =>{
     res.sendFile(__dirname + '/public/login.html')
 });
 
-mongoose.connect("mongodb://localhost:27017/MVC")
+mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error(err));
 
