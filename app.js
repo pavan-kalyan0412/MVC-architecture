@@ -17,7 +17,12 @@ app.get('/login', (req,res) =>{
     res.sendFile(__dirname + '/public/login.html')
 });
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL,  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    socketTimeoutMS: 30000,  // Increase socket timeout to 30 seconds
+    connectTimeoutMS: 30000, // Increase connection timeout to 30 seconds
+})
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error(err));
 
